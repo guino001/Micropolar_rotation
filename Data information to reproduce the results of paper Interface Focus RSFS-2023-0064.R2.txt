@@ -1,0 +1,66 @@
+Paper information: 
+%Manuscript ID: RSFS-2023-0064.R2 - Analysis of micropolar elastic multilaminated composite and its application to bio-ceramic materials for bone reconstruction.
+%Journal: Interface Focus 
+%Autores: R. Rodríguez-Ramos, Y. Espinosa-Almeyda, D. Guinovart-Sanjuán, H. Camacho-Montes, P. Rodríguez-Bermúdez, H. Brito-Santana, J. A. Otero, and F. J. Sabina.
+%Corresponding author email: yoanh.espinosa@uacj.mx
+
+Code Information: 
+
+Program: Micropolar_rotated_2024.m
+Author: David Guinovart
+Email: guino001@umn.edu
+
+This program reproduces the numerical results reported in Section 4.2: Micropolar elastic bi-laminated composites.
+*Tables 1 and 2, section 4.2
+Material data
+c1122_1 = .65;
+c1212_1 = .35;
+c1221_1 = .35; 
+c1111_1=1;
+Entry values:
+V1=0.1:0.1:0.9
+angles=[30]; For Table 1
+angles=[45]; For Table 2
+R1=rotation_matrix([0,0,0]);
+R2=rotation_matrix([0,0,th2]);
+
+*Figures 1 and 2, section 4.2
+Material data for Figure 1:
+c1122_1 = .65;
+c1212_1 = .35;
+c1221_1 = .30;
+c1111_1=1;
+Material data for Figure 2:
+c1122_1 = -.40;
+c1212_1 = .70;
+c1221_1 = .60;
+c1111_1=1;
+Entry values for both Figures
+V1=0.1:0.1:0.9;
+angles=0:2.5:90;
+R1=rotation_matrix([0,0,th2]);
+R2=rotation_matrix([0,0,0]);
+
+*Tables 3 and 4, section 4.2
+Material data for Table 3:
+c1122_1 = .65;
+c1212_1 = .35;
+c1221_1 = .30;
+c1111_1=1;
+Material data for Table 4:
+c1122_1 = -.40;
+c1212_1 = .70;
+c1221_1 = .60;
+c1111_1=1;
+Entry values for both Figures
+V1=0.3, 0.5, 0.7;  % fixed V1 volume fractions
+angles=[45, 50, 60, 75];
+R1=rotation_matrix([0,0,35]);
+R2=rotation_matrix([0,0,th2]);
+
+
+Program: Isotropic_Micropolar_biocomposite_2024.mlx
+Author: Jose A. Otero
+Email: j.a.otero@tec.mx
+
+This program reproduces Figures 4 and 5 of Section 4.3: Application of the micropolar theory for bone reconstruction.
